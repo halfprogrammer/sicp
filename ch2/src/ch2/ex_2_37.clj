@@ -11,7 +11,7 @@
 (defn matrix-transpose [m]
   (apply map vector m))
 
-(defn matrix-*-matrix [m2 m1]
+(defn matrix-*-matrix [m1 m2]
   (let [m2 (matrix-transpose m2)]
     (map (fn [r1]
            (matrix-*-vector m2 r1))
